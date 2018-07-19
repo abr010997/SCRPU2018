@@ -24,7 +24,7 @@
     <li href="#tabconten5-Comercial-Industrial">Comercial-Industrial</li>
     <li href="#tabconten5-Estacióndeservicios">Actividades Estación de servicios</li>
     <li href="#tabconten2">Patentes</li>
-    <li href="#tabconten20">LEY :v</li>
+    <!-- <li href="#tabconten20">LEY :v</li> -->
     
     
   </ul> 
@@ -312,9 +312,9 @@
     </div>
 
 
-
+<!-- 
     <div class="container-fluid" id="tabconten20">
-      <!-- contenido de tab 5 -->
+  
         <form method="POST" action="?c=class04oficina&m=editarLeyes">
           <div class="form-group">
             <label for="id">Código Trámite</label>
@@ -334,7 +334,7 @@
           <button type="submit" class="btn btn-success ">Guardar</button>
           <br>
         </form>
-    </div>
+    </div> -->
 
  <!--o de tab  -->
     </div>
