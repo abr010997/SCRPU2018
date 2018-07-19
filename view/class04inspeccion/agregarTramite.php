@@ -67,7 +67,7 @@
     <!--<li  href="#tabconten3">Áreas de Protección</li>-->
    
     <li href="#tabconten6">Desarrollo en el Sector</li>
-    <li href="#tabconten7">Tipo de Red Vial</li>
+    <!-- <li href="#tabconten7">Tipo de Red Vial</li> -->
     <li href="#tabconten8">Patentes</li>
      <li href="#tabconten10">Acceso Servidumbre de Paso</li>
     <li href="#tabconten11">Acceso Servidumbre Agrícola</li>
@@ -231,9 +231,9 @@
 
 
 
-
+<!-- 
     <div class="container-fluid" id="tabconten6">
-      <!-- contenido de tab 8 -->
+     
       <form method="POST" action="?c=class04inspeccion&m=editarTipoRed">
           <div class="form-group">
             <label for="id">Código Trámite</label>
@@ -253,7 +253,7 @@
           <button type="submit" class="btn btn-success ">Guardar</button>
           <br>
         </form>
-    </div>
+    </div> -->
 
 
 
