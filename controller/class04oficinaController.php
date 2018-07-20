@@ -493,6 +493,31 @@ public function guardarObservacionComercialIndustrial()
 			require_once 'view/footer.php';
 		}
 	}
+
+
+	///////////////////////////////////
+
+	///////////////////////////////////////////////////////////////////
+	public function editarActividades00()
+	{
+		if($_POST){
+			   $actividades00 = $this->class04oficina->getTododasEstados();
+			    $this->class04oficina->eliminarActividades00($_REQUEST['id']);
+			    foreach ($actividades00 as $idactdes00):
+    				if( isset($_REQUEST['idactdes00'.$idactdes00['PU00IDAD']] ) )
+      				$this->class04oficina->asignarActividades00($_REQUEST['id'], $idactdes00['PU00IDAD']);
+  				endforeach;
+				header('location:?c=class04oficina&m=editarActividades00&id='.$_REQUEST['id']);
+		}
+		else{
+			$this->class04oficina = $this->class04oficina->buscarTraIng($_REQUEST['id']);
+
+			require_once 'view/header.php';
+			require_once 'view/class04oficina/aplicarActividades.php';
+			require_once 'view/footer.php';
+		}
+	}
+	///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	///
 	public function asignarLeyAccesos()

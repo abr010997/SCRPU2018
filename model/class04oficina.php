@@ -534,6 +534,42 @@ public function eliminarActividades5($idtramite)
 		return $result;
 	}
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+public function eliminarActividades00($idtramite)
+	{
+		$sql5 = "DELETE FROM PU00ADTRA WHERE PU04IDTRA = '".$idtramite."';";	
+		$this->conexion->consultaSimple($sql5);		
+	}
+
+	public function asignarActividades00($idtramite, $idactdes)
+	{
+		$sql6 = "INSERT INTO PU00ADTRA VALUES ('".$idtramite."','".$idactdes."');";
+		$this->conexion->consultaSimple($sql6);	
+	}
+
+	public function tieneActividades00($idtramite, $idactdes)
+	{
+		
+		$sql7 = "SELECT COUNT(*) AS total50 FROM PU00ADTRA WHERE PU04IDTRA='".$idtramite."' AND PU00IDAD='".$idactdes."';";
+		$result = $this->conexion->consultaRetorno($sql7);
+		$row = mysqli_fetch_array($result);		
+		return $row;
+
+	
+	}
+
+	public function getTododasEstados()
+	{
+		//$sql = "CALL SP06_ACTIVIDAD_DESARROLLOS_MOSTRAR();";
+		$sql = "SELECT * FROM PU00AD";
+		$result = $this->conexion->consultaRetorno($sql);
+		return $result;
+	}
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
 	/////////////////////////////////////////////////////////////////////////////////////////////////
 	public function listarTraRealizado()
 	{

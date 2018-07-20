@@ -1,4 +1,7 @@
+
+
 <?php $idtipoleyes = $this->class04oficina->getTodasLeyes(); ?>
+<?php $iddesarrollos00 = $this->class04oficina->getTododasEstados(); ?>
 
   <h1>Revisión General del Trámite </h1>  
 
@@ -492,14 +495,5 @@
 
 
 
-
-      <div class="container-fluid" id="tabconten5">
-
-
-      </div>
-
-
-
-
-
+        
 </div>
