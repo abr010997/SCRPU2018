@@ -1,7 +1,7 @@
 
 
 <?php $idtipoleyes = $this->class04oficina->getTodasLeyes(); ?>
-<?php $iddesarrollos00 = $this->class04oficina->getTododasEstados(); ?>
+<?php $idestados = $this->class04oficina->getTododasEstados(); ?>
 
   <h1>Revisión General del Trámite </h1>  
 
@@ -469,9 +469,6 @@
 
 
          
-    
-
-
     </div>
 
       <!-- contenido de tab 3 -->
@@ -493,7 +490,33 @@
 
         </div>
 
+     <div class="container-fluid" id="tabconten5">
+      <!-- contenido de tab 4 -->
+      
 
+          <form method="POST" action="?c=class04oficina&m=editarActividades00">
+          <div class="form-group">
+            <label for="id">Código Trámite</label>
+            <input type="text" class="form-control" id="id" name="id" value="<?php echo $this->class04oficina->getAtributo('PU04IDTRA');?>" readonly> 
+            <?php  $idtramite = $this->class04oficina->getAtributo('PU04IDTRA'); ?>
+          </div>
+          <?php foreach( $idestados as $idactdes00 ): ?>
+          <?php $isCheck = $this->class04oficina->tieneActividades00($idtramite, $idactdes00['PU00IDAD']);?>
+          <div class="checkbox">
+            <label>
+            <input type="checkbox" name="idactdes00<?php echo $idactdes00['PU00IDAD']; ?>"
+             <?php if($isCheck['total50']) {echo "checked";} ?>
+            /> <?php echo $idactdes00['PUDESAD'] ;?>
+            </label>
+          </div>
+          <?php endforeach; ?>
+          <button type="submit" class="btn btn-success">Guardar</button>
+          <br>
+
+        </form>
+         
+
+    </div>
 
         
 </div>
