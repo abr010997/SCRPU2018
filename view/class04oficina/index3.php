@@ -42,34 +42,14 @@
                     <button class="btn btn-info dropdown-toggle" type="button" data-toggle="dropdown">Opciones
                       <span class="caret"></span></button>
                       <ul class="dropdown-menu">
-                        <!--<li class="divider"></li>
-                        <li class="dropdown-header">Condiciones</li>
-                        <li>
-                            <a href="?c=classreporte&m=rZonaVerde&id=<?php echo $row[0]; ?>" target="_blank"> rZonaVerde</a>
-                        </li>
-                        <li>
-                            <a href="?c=classreporte&m=rInstitucional&id=<?php echo $row[0]; ?>" target="_blank"> rInstitucional</a>
-                        </li>
-                        <li>
-                            <a href="?c=classreporte&m=rComercialCentral&id=<?php echo $row[0]; ?>" target="_blank"> rComercialCentral</a>
-                        </li>
-                        <li>
-                            <a href="?c=classreporte&m=rIndustrial&id=<?php echo $row[0]; ?>" target="_blank"> rIndustrial</a>
-                        </li>
-                        <li>
-                            <a href="?c=classreporte&m=rResidencialComercial&id=<?php echo $row[0]; ?>" target="_blank"> rResidencialComercial</a>
-                        </li>
-                        <li>
-                            <a href="?c=classreporte&m=rResidencial&id=<?php echo $row[0]; ?>" target="_blank"> rResidencial</a>
-                        </li>
-                        <li>
-                            <a href="?c=classreporte&m=rTuristicoComercial&id=<?php echo $row[0]; ?>" target="_blank"> rTuristicoComercial</a>
-                        </li>
-                        <li class="divider"></li>-->
-                        <!--<li class="dropdown-header">Trámite</li>-->
+                      
                         <li>
                             <a href="?c=class04oficina&m=revisarTra&id=<?php echo $row[0]; ?>">
                             <span class="glyphicon glyphicon-pencil"></span> Revisar Trámite</a>
+                        </li>
+                              <li>
+                            <a href="?c=class04oficina&m=editarActividades00&id=<?php echo $row[0]; ?>">
+                            <span class="glyphicon glyphicon-pencil"></span> Aprobar o Denegar Trámite</a>
                         </li>
                         <li>
                             <a href="?c=classreporte&m=reporte&id=<?php echo $row[0]; ?>" target="_blank"> Reporte</a>

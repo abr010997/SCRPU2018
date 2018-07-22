@@ -1,9 +1,4 @@
-
-
-<?php $idtipoleyes = $this->class04oficina->getTodasLeyes(); ?>
-<?php $idestados = $this->class04oficina->getTododasEstados(); ?>
-
-  <h1>Revisión General del Trámite </h1>  
+<h1>Revisión General del Trámite </h1>  
 
        <div class="col-xs-2">
   <input type="text" class="form-control" id="id" name="id" value="<?php echo $this->class04oficina->getAtributo('PU04IDTRA');?>"  readonly> 
@@ -16,8 +11,7 @@
     <li href="#tabconten1">Ingreso Trámite</li>
     <li href="#tabconten2">Inspección</li>
     <li  href="#tabconten3">Oficina</li>
-     <li  href="#tabconten4">Observaciones generales</li>
-    <li  href="#tabconten5">Aplicar leyes</li>
+    <li  href="#tabconten4">Observaciones generales</li>
   </ul> 
   <div class="resp-tabs-container hor_1">
 
@@ -132,13 +126,6 @@
      <a href="?c=class04oficina&m=editarLeyAreaspro&id=<?php echo $idtramite;?>" class="btn btn-danger" role="button">Editar Ley</a> 
   <br>  
 </form>
-
-
-
-
-
-
-
 
 
     </div>
@@ -490,33 +477,7 @@
 
         </div>
 
-     <div class="container-fluid" id="tabconten5">
-      <!-- contenido de tab 4 -->
-      
-
-          <form method="POST" action="?c=class04oficina&m=editarActividades00">
-          <div class="form-group">
-            <label for="id">Código Trámite</label>
-            <input type="text" class="form-control" id="id" name="id" value="<?php echo $this->class04oficina->getAtributo('PU04IDTRA');?>" readonly> 
-            <?php  $idtramite = $this->class04oficina->getAtributo('PU04IDTRA'); ?>
-          </div>
-          <?php foreach( $idestados as $idactdes00 ): ?>
-          <?php $isCheck = $this->class04oficina->tieneActividades00($idtramite, $idactdes00['PU00IDAD']);?>
-          <div class="checkbox">
-            <label>
-            <input type="checkbox" name="idactdes00<?php echo $idactdes00['PU00IDAD']; ?>"
-             <?php if($isCheck['total50']) {echo "checked";} ?>
-            /> <?php echo $idactdes00['PUDESAD'] ;?>
-            </label>
-          </div>
-          <?php endforeach; ?>
-          <button type="submit" class="btn btn-success">Guardar</button>
-          <br>
-
-        </form>
-         
-
-    </div>
+    
 
         
 </div>
